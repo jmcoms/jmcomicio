@@ -1,5 +1,9 @@
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/9d164ecc-e6ae-4e50-a497-b3ca79344ccf" style="align-self: center"/>
+  <a href="https://github.com.k709.com/?20250317.html">
+    <img src="https://github.com/user-attachments/assets/9d164ecc-e6ae-4e50-a497-b3ca79344ccf" style="align-self: center; display: block; margin: auto;" />
+  </a>
+</p>
+
 </p>
 以下是关于 ‌18comic.vip 禁漫天堂‌ 多线程下载器的综合信息整理：
 
