@@ -1,0 +1,160 @@
+{include file="header.html"}
+<div class="container"> 
+   <div class="lists lists-filter lists-thumb-top lists-title-lines-1"> 
+    <header> 
+     <h3>影视筛选</h3>
+    </header> 
+    <div class="lists-content filter"> 
+     <dl>
+      <dt>
+       分类:
+      </dt> 
+
+      <dd>
+       <a href="{随机栏目URL}" class="curr">全部</a>
+
+
+        <a href="{随机栏目URL}">动作</a>
+
+                     <a href="{随机栏目URL}">喜剧</a>
+
+                     <a href="{随机栏目URL}">爱情</a>
+
+                     <a href="{随机栏目URL}">恐怖</a>
+
+                     <a href="{随机栏目URL}">科幻</a>
+
+                     <a href="{随机栏目URL}">剧情</a>
+
+                     <a href="{随机栏目URL}">战争</a>
+
+                     <a href="{随机栏目URL}">警匪</a>
+
+                     <a href="{随机栏目URL}">犯罪</a>
+
+                     <a href="{随机栏目URL}">动画</a>
+
+                     <a href="{随机栏目URL}">奇幻</a>
+
+                     <a href="{随机栏目URL}">武侠</a>
+
+                     <a href="{随机栏目URL}">冒险</a>
+
+                     <a href="{随机栏目URL}">枪战</a>
+
+                     <a href="{随机栏目URL}">悬疑</a>
+
+                     <a href="{随机栏目URL}">惊悚</a>
+
+                     <a href="{随机栏目URL}">古装</a>
+
+                     <a href="{随机栏目URL}">历史</a>
+
+                     <a href="{随机栏目URL}">灾难</a>
+
+                     <a href="{随机栏目URL}">伦理</a>
+
+                
+  
+      </dd> 
+     </dl> 
+     <dl>
+      <dt>
+       地区:
+      </dt> 
+      <dd>
+
+
+       <a href="{随机栏目URL}" class="curr">全部</a>
+      
+
+                      <a href="{随机栏目URL}">内地</a>
+                                       <a href="{随机栏目URL}">香港</a>
+                                       <a href="{随机栏目URL}">台湾</a>
+                                       <a href="{随机栏目URL}">美国</a>
+                                       <a href="{随机栏目URL}">法国</a>
+                                       <a href="{随机栏目URL}">英国</a>
+                                       <a href="{随机栏目URL}">日本</a>
+                                       <a href="{随机栏目URL}">韩国</a>
+                                       <a href="{随机栏目URL}">德国</a>
+                                       <a href="{随机栏目URL}">泰国</a>
+                                       <a href="{随机栏目URL}">印度</a>
+                                       <a href="{随机栏目URL}">其它</a>
+                    	   
+
+      </dd> 
+     </dl> 
+     <dl>
+      <dt>
+       年代:
+      </dt> 
+      <dd>
+
+
+
+       <a href="{随机栏目URL}" class="curr">全部</a>
+
+                       <a href="{随机栏目URL}">2022</a>
+                                        <a href="{随机栏目URL}">2021</a>
+                                        <a href="{随机栏目URL}">2020</a>
+                                        <a href="{随机栏目URL}">2019</a>
+                                        <a href="{随机栏目URL}">2018</a>
+                                        <a href="{随机栏目URL}">2017</a>
+                                        <a href="{随机栏目URL}">2016</a>
+                    
+
+      
+      </dd>
+     </dl>
+    </div> 
+    <header> 
+     <dl>
+      <dt class="on ">
+       <a href="{随机栏目URL}">按时间排序</a>
+      </dt>
+      <dt>
+       <a href="{随机栏目URL}">按人气排序</a>
+      </dt>
+      <dt>
+       <a href="{随机栏目URL}">按评分排序</a>
+      </dt>
+     </dl> 
+    </header> 
+    <div class="lists-content ">
+     <ul>
+         {loop type="arclist" image="1" info="1" row="36"}
+         <li><a href="{$vo.url}" class="thumbnail " target="_blank "><img referrerpolicy="no-referrer " src="{$vo.pic}" class="thumb " alt="{$vo.title} ">
+             <div class="note ">
+                 <span>{getone name="diy:fenbianlv" cacheid="$vo.url"/}</span>
+             </div>
+             <div class="countrie ">
+                 <span class="orange ">{getone name="diy:nian" cacheid="$vo.url"/}</span>
+                 <span class="orange ">{getone name="diy:diqu" cacheid="$vo.url"/}</span>
+             </div></a><h2><a href="{$vo.url}" target="_blank ">{$vo.title}</a></h2>
+             <footer>
+                 <span class="star star30 "></span>
+                 <span class="rate ">{getone name="diy:pingfen" cacheid="$vo.url"/}</span>
+             </footer></li>
+         {/loop}
+
+     </ul>
+    </div> 
+    <div class="pagination pagination-multi ">
+     <ul>
+
+	 
+      <li>  <a class="page_link" href="/" title="首页">首页</a></li>
+      <li class="prev-page">  <a class="page_link" href="{随机栏目URL}" title="上一页">上一页</a></li>
+         {loop type="typename" image="1" info="1" row="10"}
+              <li>  <a class="page_link" href="{$vo.url}" title="第{$vo.i}页">{$vo.i}</a></li>
+         {/loop}
+              <li class="next-page">  <a class="page_link" href="{随机栏目URL}" title="下一页">下一页</a></li>
+     <li>   <a class="page_link" href="{随机栏目URL}" title="尾页">尾页</a></li>
+
+</ul></div>
+   
+     
+    </div>
+   </div>
+
+{include file="footer.html"}

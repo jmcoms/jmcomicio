@@ -1,0 +1,26 @@
+body, html, #WANG {
+        background-color: #000;
+        padding: 0;
+        margin: 0;
+        color: transparent;
+        height: 100%;
+        width: 100%;
+    }
+    body,html,#a1,#ads{background-color:#000;padding:0;margin:0;width:100%;height:100%;color:transparent;} 
+body{position:relative;}
+ .panel{background:#000000;background-size:90% 90%;height:26px;padding-top:10px;color:#ffffff;font-family:宋体;display:none;}
+ .panel a:link{text-decoration:none;color:#ffffff;font-weight:bold;}
+ .panel a:visited{text-decoration:none;color:#ffffff;font-weight:bold;}
+ .panel a:hover{text-decoration:none;color:#ffffff;font-weight:bold;}
+ .panel a:active{text-decoration:none;color:#ffffff;font-weight:bold;}
+ .slide{margin:0;padding:0;border-top:solid 0px #000000;}
+ .OK-jiexi{display:block;position:relative;right:0px;width:90px;height:26px;padding-top:10px;font-family:宋体;font-family:arial, sans-serif;font-size:14px;color:#ffffff;background:#2C2C2C;text-decoration:none;text-align:center;-moz-border-top-left-radius:5px;-moz-border-top-right-radius:5px;border-top-left-radius:5px;border-top-right-radius:5px;-moz-border-bottom-left-radius:5px;-moz-border-bottom-right-radius:5px;border-bottom-left-radius:5px;border-bottom-right-radius:5px;}
+  #playad{
+    position: absolute; 
+	display:none;
+	width:100%;
+    height:100%;
+}
+        #WANG{
+          display:none;
+        }

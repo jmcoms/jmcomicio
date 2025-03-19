@@ -1,0 +1,460 @@
+{include file="header.html"}
+<div class="container home-content-right">
+    <div class="content-wrap">
+        <div class="content">
+            <div class="lists lists-thumb-top lists-title-lines-1" id="slider">
+                <header>
+                    <h3>
+                        正在上映
+                    </h3>
+                    <dl>
+                        <dt>
+                            电影
+                        </dt>
+                        <dt>
+                            连续剧
+                        </dt>
+                        <dt>
+                            综艺
+                        </dt>
+                        <dt>
+                            动漫
+                        </dt>
+                    </dl>
+                </header>
+                <div class="bd">
+
+                    {loop type="arclist" image="1" info="1" row="4"}
+                    <div class="lists-content">
+                        <ul>
+                            {loop type="arclist" image="1" info="1" row="8"}
+                            <li>
+                                <a href="{$vo.url}" class="thumbnail" target="_blank">
+                                    <img referrerpolicy="no-referrer" src="{$vo.pic}" class="thumb" alt="{$vo.title}">
+                                    <div class="note">
+												<span>
+												{getone name="diy:fenbianlv" cacheid="$vo.url"/}
+												</span>
+                                    </div>
+                                </a>
+                                <h2>
+                                    <a href="{$vo.url}" target="_blank">
+                                        {$vo.title} </a>
+                                </h2>
+                                <footer>
+											<span class="star star40">
+											</span>
+                                    <span class="rate">
+												{getone name="diy:pingfen" cacheid="$vo.url"/}
+											</span>
+                                </footer>
+                            </li>
+                            {/loop}
+                        </ul>
+                    </div>
+                    {/loop}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="lists lists-rank lists-title-lines-1">
+            <header>
+                <div class="title">
+                    <h3>
+                        本周排行榜
+                    </h3>
+                </div>
+            </header>
+            <div class="lists-content">
+                <ul>
+                    {loop type="arclist" image="1" info="1" row="15"}
+                    <li>
+								<span>
+									{$vo.i}								</span>
+                        <h2>
+                            <a href="{$vo.url}" target="_blank" title="{$vo.title}">
+                                {$vo.title} </a>
+                        </h2>
+                        <time>
+                            {当天日期}
+                        </time>
+                    </li>
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content-wrap">
+        <div class="content">
+            <div class="lists lists-thumb-top lists-title-lines-1" id="slider1">
+                <header>
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            热门电影 </h3>
+                    </a>
+                    <dl>
+                        <dt>
+                            推荐
+                        </dt>
+                        <dt>
+                            动作片
+                        </dt>
+                        <dt>
+                            喜剧片
+                        </dt>
+                        <dt>
+                            爱情片
+                        </dt>
+                        <dt>
+                            科幻片
+                        </dt>
+                        <dt>
+                            言情片
+                        </dt>
+                        <dt>
+                            恐怖片
+                        </dt>
+                        <dt>
+                            剧情片
+                        </dt>
+                        <dt>
+                            战争片
+                        </dt>
+                    </dl>
+                </header>
+                <div class="bd">
+                    {loop type="arclist" image="1" info="1" row="9"}
+                    <div class="lists-content">
+                        <ul>
+                            {loop type="arclist" image="1" info="1" row="8"}
+                            <li>
+                                <a href="{$vo.url}" class="thumbnail" target="_blank">
+                                    <img referrerpolicy="no-referrer" src="{$vo.pic}" class="thumb" alt="{$vo.title}">
+                                    <div class="note">
+												<span>
+												{getone name="diy:fenbianlv" cacheid="$vo.url"/}
+												</span>
+                                    </div>
+                                </a>
+                                <h2>
+                                    <a href="{$vo.url}" target="_blank">
+                                        {$vo.title} </a>
+                                </h2>
+                                <footer>
+											<span class="star star40">
+											</span>
+                                    <span class="rate">
+												{getone name="diy:pingfen" cacheid="$vo.url"/}
+											</span>
+                                </footer>
+                            </li>
+                            {/loop}
+                        </ul>
+                    </div>
+                    {/loop}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="lists lists-rank lists-title-lines-1">
+            <header>
+                <div class="title">
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            电影排行榜
+                        </h3>
+                    </a>
+                </div>
+            </header>
+            <div class="lists-content">
+                <ul>
+                    {loop type="arclist" image="1" info="1" row="15"}
+                    <li>
+								<span>
+									{$vo.i}								</span>
+                        <h2>
+                            <a href="{$vo.url}" target="_blank" title="{$vo.title}">
+                                {$vo.title} </a>
+                        </h2>
+                        <time>
+                            {当天日期}
+                        </time>
+                    </li>
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content-wrap">
+        <div class="content">
+            <div class="lists lists-thumb-top lists-title-lines-1" id="slider2">
+                <header>
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            热门连续剧 </h3>
+                    </a>
+                    <dl>
+                        <dt>
+                            推荐
+                        </dt>
+                        <dt>
+                            国产剧
+                        </dt>
+                        <dt>
+                            港台剧
+                        </dt>
+                        <dt>
+                            日韩剧
+                        </dt>
+                        <dt>
+                            欧美剧
+                        </dt>
+                        <dt>
+                            其他剧
+                        </dt>
+                    </dl>
+                </header>
+                <div class="bd">
+                    {loop type="arclist" image="1" info="1" row="6"}
+                    <div class="lists-content">
+                        <ul>
+                            {loop type="arclist" image="1" info="1" row="8"}
+                            <li>
+                                <a href="{$vo.url}" class="thumbnail" target="_blank">
+                                    <img referrerpolicy="no-referrer" src="{$vo.pic}" class="thumb" alt="{$vo.title}">
+                                    <div class="note">
+												<span>
+												{getone name="diy:fenbianlv" cacheid="$vo.url"/}
+												</span>
+                                    </div>
+                                </a>
+                                <h2>
+                                    <a href="{$vo.url}" target="_blank">
+                                        {$vo.title} </a>
+                                </h2>
+                                <footer>
+											<span class="star star40">
+											</span>
+                                    <span class="rate">
+												{getone name="diy:pingfen" cacheid="$vo.url"/}
+											</span>
+                                </footer>
+                            </li>
+                            {/loop}
+                        </ul>
+                    </div>
+                    {/loop}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="lists lists-rank lists-title-lines-1">
+            <header>
+                <div class="title">
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            连续剧排行榜
+                        </h3>
+                    </a>
+                </div>
+            </header>
+            <div class="lists-content">
+                <ul>
+                    {loop type="arclist" image="1" info="1" row="15"}
+                    <li>
+								<span>
+									{$vo.i}								</span>
+                        <h2>
+                            <a href="{$vo.url}" target="_blank" title="{$vo.title}">
+                                {$vo.title} </a>
+                        </h2>
+                        <time>
+                            {当天日期}
+                        </time>
+                    </li>
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content-wrap">
+        <div class="content">
+            <div class="lists lists-thumb-top lists-title-lines-1" id="slider3">
+                <header>
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            热门综艺 </h3>
+                    </a>
+                    <dl>
+                        <dt>
+                            推荐
+                        </dt>
+                    </dl>
+                </header>
+                <div class="bd">
+                    <div class="lists-content">
+                        <ul>
+                            {loop type="arclist" image="1" info="1" row="8"}
+                            <li>
+                                <a href="{$vo.url}" class="thumbnail" target="_blank">
+                                    <img referrerpolicy="no-referrer" src="{$vo.pic}" class="thumb" alt="{$vo.title}">
+                                    <div class="note">
+												<span>
+												{getone name="diy:fenbianlv" cacheid="$vo.url"/}
+												</span>
+                                    </div>
+                                </a>
+                                <h2>
+                                    <a href="{$vo.url}" target="_blank">
+                                        {$vo.title} </a>
+                                </h2>
+                                <footer>
+											<span class="star star40">
+											</span>
+                                    <span class="rate">
+												{getone name="diy:pingfen" cacheid="$vo.url"/}
+											</span>
+                                </footer>
+                            </li>
+                            {/loop}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="lists lists-rank lists-title-lines-1">
+            <header>
+                <div class="title">
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            综艺排行榜
+                        </h3>
+                    </a>
+                </div>
+            </header>
+            <div class="lists-content">
+                <ul>
+                    {loop type="arclist" image="1" info="1" row="15"}
+                    <li>
+								<span>
+									{$vo.i}								</span>
+                        <h2>
+                            <a href="{$vo.url}" target="_blank" title="{$vo.title}">
+                                {$vo.title} </a>
+                        </h2>
+                        <time>
+                            {当天日期}
+                        </time>
+                    </li>
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="content-wrap">
+        <div class="content">
+            <div class="lists lists-thumb-top lists-title-lines-1" id="slider4">
+                <header>
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            热门动漫 </h3>
+                    </a>
+                    <dl>
+                        <dt>
+                            推荐
+                        </dt>
+                    </dl>
+                </header>
+                <div class="bd">
+                    <div class="lists-content">
+                        <ul>
+                            {loop type="arclist" image="1" info="1" row="8"}
+                            <li>
+                                <a href="{$vo.url}" class="thumbnail" target="_blank">
+                                    <img referrerpolicy="no-referrer" src="{$vo.pic}" class="thumb" alt="{$vo.title}">
+                                    <div class="note">
+												<span>
+												{getone name="diy:fenbianlv" cacheid="$vo.url"/}
+												</span>
+                                    </div>
+                                </a>
+                                <h2>
+                                    <a href="{$vo.url}" target="_blank">
+                                        {$vo.title} </a>
+                                </h2>
+                                <footer>
+											<span class="star star40">
+											</span>
+                                    <span class="rate">
+												{getone name="diy:pingfen" cacheid="$vo.url"/}
+											</span>
+                                </footer>
+                            </li>
+                            {/loop}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="lists lists-rank lists-title-lines-1">
+            <header>
+                <div class="title">
+                    <a href="{随机栏目URL}">
+                        <h3>
+                            动漫排行榜
+                        </h3>
+                    </a>
+                </div>
+            </header>
+            <div class="lists-content">
+                <ul>
+                    {loop type="arclist" image="1" info="1" row="15"}
+                    <li>
+								<span>
+									{$vo.i}								</span>
+                        <h2>
+                            <a href="{$vo.url}" target="_blank" title="{$vo.title}">
+                                {$vo.title} </a>
+                        </h2>
+                        <time>
+                            {当天日期}
+                        </time>
+                    </li>
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="inner container links">
+    <div class="mbxq">
+        <div>友情链接：</div>
+        <div>
+			{if $links_open}
+			{loop type="link"}
+			<a href="{$vo.url}" style="padding:0 5px;" title="{$vo.title}" target="_blank">{$vo.title}</a>
+			{/loop}
+			{/if}
+			{loop type="domain"}
+			<a href="{$vo.url}" style="padding:0 5px;" title="{$vo.title}" target="_blank">{$vo.title}</a>
+			{/loop}
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+{include file="footer.html"}

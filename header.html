@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="cache-control" content="no-siteapp">
+    <title>{$toptitle}</title>
+    <meta name="keywords" content="{$keywords}"/>
+    <meta name="description" content="{$description}"/>
+    <link type="text/css" rel="stylesheet" href="{$theme_path}/static/css/movie.css">
+    <style>
+        @media (max-width: 768px) {
+
+
+            .lists-content .thumb {
+                height: 110px;
+            }
+        }
+    </style>
+</head>
+<body class="searchon m-nav-full index">
+<script>
+    function sou() {
+
+        $("body").addClass("searchform-active");
+
+
+    }
+
+    function souoff() {
+
+        $("body").removeClass("searchform-active");
+    }
+
+</script>
+<header class="header">
+    <div class="container">
+        <h1 class="logo">
+            <a href="/" title="{$toptitle}">
+                <img src="{$theme_path}/static/picture/logo.png" alt="{$toptitle}">
+                <span>{$toptitle}</span>
+            </a>
+        </h1>
+        <span class="searchstart-on" onclick="sou()">
+					<i class="fa">
+						
+					</i>
+				</span>
+        <span class="searchstart-off" onclick="souoff()">
+					<i class="fa">
+						
+					</i>
+				</span>
+        <form method="get" action="javascript:;" class="searchform">
+            <button tabindex="3" class="sbtn" type="submit">
+                <i class="fa">
+                    
+                </i>
+            </button>
+            <input tabindex="2" name="wd" class="sinput" type="text" placeholder="搜索电影、电视剧、综艺、动漫" value="">
+        </form>
+        <div class="nav">
+            <ul>
+                <li class='current-menu-item'>
+                    <a href="/">
+                        首页
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="{随机栏目URL}">
+                        电影 </a>
+                </li>
+
+
+                <li>
+                    <a href="{随机栏目URL}">
+                        连续剧 </a>
+                </li>
+
+
+                <li>
+                    <a href="{随机栏目URL}">
+                        综艺 </a>
+                </li>
+
+
+                <li>
+                    <a href="{随机栏目URL}">
+                        动漫 </a>
+                </li>
+
+            </ul>
+        </div>
+        <span class="nav-on">
+					<i class="fa">
+						
+					</i>
+				</span>
+        <span class="nav-mask">
+				</span>
+    </div>
+</header>

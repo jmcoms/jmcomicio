@@ -1,0 +1,123 @@
+{include file="header.html"}
+  <div class="container">
+   <div class="article-container">
+    <article class="article-content">
+<style>
+	#iframe{height:480px;}
+	@media (max-width: 768px){
+	#iframe{height:160px;}
+.product-header{padding-bottom:0px;}
+}
+</style>
+<iframe id="iframe" width="100%" height="480px" allowtransparency="true" allowfullscreen="true" frameborder="0" scrolling="no" src="{getone name="diy:bilibili" cacheid="$thisurl"/}"></iframe>
+    </article>
+<style>
+	.playlist{display:none}
+
+</style>
+    <div class="playlists" id="slider">
+<header>
+	<dl>
+<dt id="listab2" class="listab on" onclick="listab(2)">
+	{getone name="diy:bofangqi" cacheid="$thisurl"/}
+</dt>
+</header>
+<div class="tempWrap" style="overflow:hidden; position:relative;">
+	<div class="bd">
+		<div id="playlist2" class="playlist clearfix" style="display:block;">
+
+			<ul>
+				{loop type="arclist"  image="1" info="1" row="50"}
+				<li id="play2_{$vo.i}" class="">
+					<a href="{$vo.i}" onclick="play(2,{$vo.i});">
+						第{$vo.i}集					</a>
+				</li>
+				{/loop}
+			</ul>
+		</div>
+	</div>
+</div>
+    </div>
+<script>
+function listab(i){
+	$(".listab").removeClass("on");
+	$("#listab"+i).addClass("on");
+$(".playlist").hide();
+$("#playlist"+i).show();
+}
+function play(i,k){
+$(".playlist li").removeClass("on");
+$("#play"+i+"_"+k).addClass("on");
+i=i+1;
+k=k+1;
+$.get("{$thisurl}?sid="+i+"&nid="+k,function(data){
+$("#iframe").attr("src",data);
+
+    });
+}
+</script>
+  <header class="product-header" style="margin-top:30px;padding-top:20px;border-top:1px solid #eee ">
+     <img src="{$pic}" referrerpolicy="no-referrer" class="thumb" alt="{$title}"> 
+     <h1 class="product-title">{$title} <span>({getone name="diy:nian" cacheid="$thisurl"/})</span> <span class="star star2"></span> <span class="rate">{getone name="diy:fenbianlv" cacheid="$thisurl"/}</span></h1>
+     <div class="product-excerpt">
+      导演：
+      <span><a href="{随机内容URL}" target="_blank">{getone name="diy:mingxing" cacheid="$thisurl"/}</a>&nbsp; </span>
+     </div> 
+     <div class="product-excerpt">
+      主演：
+      <span>
+		  {loop type="arclist" image="1" info="1" row="5"}
+		  <a href="{$vo.url}" target="_blank">{getone name="diy:mingxing" cacheid="$vo.i"/}</a>&nbsp;
+		  {/loop}
+	  </span>
+     </div> 
+     <div class="product-excerpt">
+      类型：
+      <span><a href="{$typeurl}">{$typename}</a> </span>
+     </div> 
+     <div class="product-excerpt">
+      制片国家/地区：
+      <span><a href="{随机内容URL}" target="_blank">{getone name="diy:diqu" cacheid="$thisurl"/}</a>&nbsp; </span>
+     </div>
+       <div class="product-excerpt">
+      剧情简介：
+      <span>
+		  {$body}
+	  </span>
+     </div>
+    </header>
+    <div class="article-actions clearfix"> 
+     <div class="shares">
+      <strong>分享到：</strong>
+      <a href="javascript:;" class="share-weixin" title="分享到微信"><i class="fa"></i></a>
+      <a etap="share" data-share="qzone" class="share-qzone" title="分享到QQ空间"><i class="fa"></i></a>
+      <a etap="share" data-share="weibo" class="share-tsina" title="分享到新浪微博"><i class="fa"></i></a>
+      <a etap="share" data-share="qq" class="share-sqq" title="分享到QQ好友"><i class="fa"></i></a>
+      <a etap="share" data-share="douban" class="share-douban" title="分享到豆瓣网"><i class="fa"></i></a>
+      <a etap="share" data-share="facebook" class="share-facebook" title="分享到Facebook"><i class="fa"></i></a>
+      <a etap="share" data-share="twitter" class="share-twitter" title="分享到Twitter"><i class="fa"></i></a>
+      <a etap="share" data-share="linkedin" class="share-linkedin" title="分享到Linkedin"><i class="fa"></i></a>
+     </div> 
+    </div>
+   </div> 
+   <div class="lists lists-thumb-top lists-title-lines-1 list-like">
+    <header>
+     <h3>猜你喜欢</h3>
+    </header>
+    <div class="lists-content">
+     <ul>
+		 {loop type="arclist" image="1" info="1" row="12"}
+		 <li><a href="{$vo.url}" class="thumbnail"><img referrerpolicy="no-referrer" src="{$vo.pic}" class="thumb">
+			 <div class="note">
+				 <span>{getone name="diy:fenbianlv" cacheid="$vo.url"/}</span>
+			 </div></a><h2><a href="{$vo.url}">{$vo.title}</a></h2>
+			 <footer>
+				 <span class="star star40"></span>
+				 <span class="rate">{getone name="diy:pingfen" cacheid="$vo.url"/}</span>
+			 </footer></li>
+         {/loop}
+	 </ul>
+    </div>
+   </div> 
+  </div> 
+{include file="footer.html"}
