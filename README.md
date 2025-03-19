@@ -4,105 +4,37 @@
 
 # 📚 禁漫天堂下载器
 
-一个用于 18comic.vip 禁漫天堂 jmcomic 18comic 的多线程下载器，带图形界面，带收藏夹，**免费下载收费的漫画**，下载速度飞快。图形界面基于[Tauri](https://v2.tauri.app/start/)
 
-🔽 在[Release页面](https://github.com/lanyeeee/jmcomic-downloader/releases)可以直接下载
-
-**如果本项目对你有帮助，欢迎点个 Star⭐ 支持！你的支持是我持续更新维护的动力🙏**
-
-# 🖥️ 图形界面
-
-![image](https://github.com/user-attachments/assets/619292c1-d0ab-4b92-8601-0dfb81fd460b)
-
-# 📖 使用方法
-
-#### 🚀 不使用收藏夹
-
-1. **不需要登录**，直接使用`漫画搜索`，选择要下载的漫画，点击后进入`章节详情`
-2. 在`章节详情`勾选要下载的章节，点击`下载勾选章节`按钮开始下载
-3. 下载完成后点击`打开下载目录`按钮查看结果
-
-#### ⭐ 使用收藏夹
-
-1. 点击`账号登录`按钮完成登录
-2. 使用`漫画收藏`，选择要下载的漫画，点击后进入`章节详情`
-3. 在`章节详情`勾选要下载的章节，点击`下载勾选章节`按钮开始下载
-4. 下载完成后点击`打开下载目录`按钮查看结果
-
-📹 下面的视频是完整使用流程，**没有H内容，请放心观看**
-
-https://github.com/user-attachments/assets/46096bd9-1fde-4474-b297-0f4389dbe770
-
-# ❓ 常见问题
-
-- [为什么下载过程中CPU占用很高](https://github.com/lanyeeee/jmcomic-downloader/discussions/11)
-- [使用Ubuntu22.04时，搜索结果和收藏夹无法加载封面图](https://github.com/lanyeeee/jmcomic-downloader/discussions/31)
-- [使用Ubuntu24.04时，窗口全白](https://github.com/lanyeeee/jmcomic-downloader/discussions/32)
-
-# 📚 哔咔漫画下载器  
-
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=lanyeeee&repo=picacomic-downloader)](https://github.com/lanyeeee/picacomic-downloader)  
-
-# ⚠️ 关于被杀毒软件误判为病毒
-
-对于个人开发者来说，这个问题几乎是无解的(~~需要购买数字证书给软件签名，甚至给杀毒软件交保护费~~)  
-我能想到的解决办法只有：
-
-1. 根据下面的**如何构建(build)**，自行编译
-2. 希望你相信我的承诺，我承诺你在[Release页面](https://github.com/lanyeeee/jmcomic-downloader/releases)下载到的所有东西都是安全的
-
-# 🛠️ 如何构建(build)
-
-构建非常简单，一共就3条命令  
-~~前提是你已经安装了Rust、Node、pnpm~~
-
-#### 📋 前提
-
-- [Rust](https://www.rust-lang.org/tools/install)
-- [Node](https://nodejs.org/en)
-- [pnpm](https://pnpm.io/installation)
-
-#### 📝 步骤
-
-#### 1. 克隆本仓库
-
-```
-git clone https://github.com/lanyeeee/jmcomic-downloader.git
-```
-
-#### 2.安装依赖
-
-```
-cd jmcomic-downloader
-pnpm install
-```
-
-#### 3.构建(build)
-
-```
-pnpm tauri build
-```
-
-# 🤝 提交PR
-
-**PR请提交至`develop`分支**
-
-**如果想新加一个功能，请先开个`issue`或`discussion`讨论一下，避免无效工作**
-
-其他情况的PR欢迎直接提交，比如：
-
-1. 🔧 对原有功能的改进
-2. 🐛 修复BUG
-3. ⚡ 使用更轻量的库实现原有功能
-4. 📝 修订文档
-5. ⬆️ 升级、更新依赖的PR也会被接受
-
-# ⚠️ 免责声明
-
-- 本工具仅作学习、研究、交流使用，使用本工具的用户应自行承担风险
-- 作者不对使用本工具导致的任何损失、法律纠纷或其他后果负责
-- 作者不对用户使用本工具的行为负责，包括但不限于用户违反法律或任何第三方权益的行为
-
-# 💬 其他
-
-任何使用中遇到的问题、任何希望添加的功能，都欢迎提交issue或开discussion交流，我会尽力解决  
+‌jmcomic-downloader 工具核心功能‌
+‌多线程下载‌
+支持高速下载漫画章节，提升下载效率‌27。
+‌图形界面‌
+基于 Tauri 框架开发，提供直观的界面操作，支持搜索漫画、选择章节、管理收藏夹等‌27。
+‌免费下载付费内容‌
+无需登录即可下载收费漫画，登录后可使用收藏夹功能批量管理下载任务‌27。
+‌跨平台支持‌
+已打包为 Windows/Linux/macOS 的安装包（exe 等格式），用户可直接在 Release 页面下载使用‌26。
+‌使用方法‌
+‌基础下载（无需登录）‌
+在搜索栏输入漫画名称，选择目标漫画并进入章节详情页。
+勾选需下载的章节，点击“下载勾选章节”按钮启动任务‌27。
+‌收藏夹功能（需登录）‌
+点击“账号登录”完成认证，通过“漫画收藏”选择已收藏的漫画批量下载‌27。
+‌查看结果‌
+下载完成后，点击“打开下载目录”查看本地保存的漫画文件‌27。
+‌获取方式‌
+‌直接下载‌
+访问项目的 GitHub Release 页面（如 lanyeeee/jmcomic-downloader 或 niuhuan/jmcomic-downloader）获取预编译的可执行文件‌16。
+‌自行构建‌
+若需自定义功能，可通过 Rust、Node.js 和 pnpm 环境克隆仓库并编译（需技术基础）‌7。
+‌注意事项‌
+‌杀毒软件误报‌
+部分安全软件可能误判为病毒，建议从可信来源（如 GitHub Release）下载或自行编译以减少风险‌7。
+‌依赖网络稳定性‌
+下载速度受网络环境影响，建议使用稳定连接以避免中断‌58。
+‌其他替代方案‌
+‌移动端应用‌
+安卓用户可通过应用商店搜索“禁慢天堂18comic”安装官方或第三方客户端（需注意安全性）‌38。
+‌网页端阅读‌
+直接访问 18comic.vip 在线阅读，但需注意服务器负载高可能导致访问延迟‌58。
+以上信息整合自相关开源项目及使用指南，具体操作请以实际工具版本为准。
